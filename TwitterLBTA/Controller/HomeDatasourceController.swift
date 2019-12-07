@@ -21,6 +21,11 @@ class HomeDatasourceController: DatasourceController {
         self.datasource = homeDatasourse
     }
     
+    /* invalid layout when change orientation */
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+        collectionViewLayout.invalidateLayout()
+    }
+    
    
     
     /*use this methed to set spacing between cell in collection view */
