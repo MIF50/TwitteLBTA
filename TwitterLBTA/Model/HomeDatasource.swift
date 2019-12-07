@@ -36,7 +36,19 @@ class HomeDatasource: Datasource {
     }()
     
     
-    let tweets = ["tweet1", "tweet2"]
+    let tweets: [Tweet] = {
+        let mohamedUser = User(
+            name: "Mohmaed Ibrahim ",
+            username: "@mobiledeveloper",
+            bioText: "works as android developer usign kotlin and java and learning ios using swift and swiftUI and develop my self every single day!",
+            profileImage: #imageLiteral(resourceName: "image_profile")
+        )
+        let tweet = Tweet(user: mohamedUser, message: "Welcome to episode 9 of the Twitter Series, really hope you guys are enjoying the series so far. I really need a long text block to render out so we're going to stop here.")
+        
+        let tweet2 = Tweet(user: mohamedUser, message: "This is the second tweet message for our sample project. Very ver extiting message .... ")
+        
+       return [tweet,tweet2]
+    }()
     
     
     /* Header */
@@ -56,6 +68,9 @@ class HomeDatasource: Datasource {
 
     /* item for every cell */
     override func item(_ indexPath: IndexPath) -> Any? {
+        if indexPath.section == 1 {
+            return tweets[indexPath.row]
+        }
         return users[indexPath.item]
     }
     /* to set number of section in collection view */

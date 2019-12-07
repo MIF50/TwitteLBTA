@@ -58,10 +58,10 @@ extension HomeDatasourceController {
         searchButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
         
         let composeButton = UIButton(type: .system)
+        composeButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
         composeButton.setImage(#imageLiteral(resourceName: "share_ic").withRenderingMode(.alwaysOriginal), for: .normal)
         composeButton.imageView?.contentMode = .scaleAspectFit
-//      composeButton.imageEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        composeButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+//        composeButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -120)
         navigationItem.rightBarButtonItems = [ UIBarButtonItem(customView: composeButton),
                                                UIBarButtonItem(customView: searchButton) ]
         
