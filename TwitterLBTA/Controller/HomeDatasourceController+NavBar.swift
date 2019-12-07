@@ -26,6 +26,22 @@ extension HomeDatasourceController {
         
         navigationController?.navigationBar.backgroundColor = .white
         navigationController?.navigationBar.isTranslucent = false
+        // to remove the default separatorLine in nav bar
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        // create navBarSeraratorLine
+        let navBarSeparatorView = UIView()
+        navBarSeparatorView.backgroundColor = UIColor(r: 230, g: 230, b: 230)
+        view.addSubview(navBarSeparatorView)
+        navBarSeparatorView.anchor(
+            view.topAnchor,
+            leading: view.leadingAnchor,
+            bottom: nil,
+            trailing: view.trailingAnchor,
+
+            heightConstant: 0.5
+        )
+        
     }
     
     

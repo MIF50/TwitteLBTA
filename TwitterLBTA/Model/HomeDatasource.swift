@@ -36,6 +36,9 @@ class HomeDatasource: Datasource {
     }()
     
     
+    let tweets = ["tweet1", "tweet2"]
+    
+    
     /* Header */
     override func headerClasses() -> [DatasourceCell.Type]? {
         return [UserHeader.self]
@@ -43,7 +46,7 @@ class HomeDatasource: Datasource {
     
     /* cells */
     override func cellClasses() -> [DatasourceCell.Type] {
-        return[UserCell.self]
+        return[UserCell.self, TweetCell.self]
     }
     
     /* footer */
@@ -62,6 +65,9 @@ class HomeDatasource: Datasource {
     
     /* number of items in collection view */
     override func numberOfItems(_ section: Int) -> Int {
+        if section == 1 {
+            return tweets.count
+        }
         return users.count
     }
 }

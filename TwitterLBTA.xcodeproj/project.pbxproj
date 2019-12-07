@@ -14,6 +14,7 @@
 		302C025F2388888C004E797E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302C025E2388888C004E797E /* User.swift */; };
 		3077FED02391A47E004B00A8 /* HomeDatasourceController+NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077FECF2391A47E004B00A8 /* HomeDatasourceController+NavBar.swift */; };
 		30A77173238990550042E1E7 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A77172238990550042E1E7 /* UserCell.swift */; };
+		30BFA632239BA5A500F0FCC0 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFA631239BA5A500F0FCC0 /* TweetCell.swift */; };
 		30D7BCB4235509D600192363 /* HomeDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D7BCB3235509D600192363 /* HomeDatasourceController.swift */; };
 		30D7BCB92355159300192363 /* UserHeaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D7BCB82355159300192363 /* UserHeaderFooter.swift */; };
 		30D7BCBB235515CD00192363 /* HomeDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D7BCBA235515CD00192363 /* HomeDatasource.swift */; };
@@ -30,6 +31,7 @@
 		302C025E2388888C004E797E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3077FECF2391A47E004B00A8 /* HomeDatasourceController+NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeDatasourceController+NavBar.swift"; sourceTree = "<group>"; };
 		30A77172238990550042E1E7 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		30BFA631239BA5A500F0FCC0 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		30D7BCB3235509D600192363 /* HomeDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasourceController.swift; sourceTree = "<group>"; };
 		30D7BCB82355159300192363 /* UserHeaderFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderFooter.swift; sourceTree = "<group>"; };
 		30D7BCBA235515CD00192363 /* HomeDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasource.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				30D7BCB82355159300192363 /* UserHeaderFooter.swift */,
 				30A77172238990550042E1E7 /* UserCell.swift */,
+				30BFA631239BA5A500F0FCC0 /* TweetCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				30D7BCBB235515CD00192363 /* HomeDatasource.swift in Sources */,
 				30115EBE2351132E007090F5 /* AppDelegate.swift in Sources */,
 				302C025F2388888C004E797E /* User.swift in Sources */,
+				30BFA632239BA5A500F0FCC0 /* TweetCell.swift in Sources */,
 				30D7BCB92355159300192363 /* UserHeaderFooter.swift in Sources */,
 				30D7BCB4235509D600192363 /* HomeDatasourceController.swift in Sources */,
 				3077FED02391A47E004B00A8 /* HomeDatasourceController+NavBar.swift in Sources */,
