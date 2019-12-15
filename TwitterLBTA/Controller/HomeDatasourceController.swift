@@ -7,6 +7,8 @@
 //
 
 import LBTAComponents
+import TRON
+
 
 class HomeDatasourceController: DatasourceController {
     
@@ -17,8 +19,15 @@ class HomeDatasourceController: DatasourceController {
         
         setupNavigationBarItem()
         
-        let homeDatasourse = HomeDatasource()
-        self.datasource = homeDatasourse
+//        self.datasource = homeDatasourse
+        
+        Service.sharedInstance.fetchHomeFeed { (usersData) in
+            let homeDatasourse = HomeDatasource()
+            homeDatasourse.users = usersData
+            self.datasource = homeDatasourse
+            
+        }
+//        fetchHomeFeed()
     }
     
     /* invalid layout when change orientation */

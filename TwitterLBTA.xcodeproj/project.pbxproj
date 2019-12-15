@@ -12,6 +12,7 @@
 		30115ECA23511330007090F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30115EC823511330007090F5 /* LaunchScreen.storyboard */; };
 		30115ED523512DEB007090F5 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30115ED423512DEB007090F5 /* HomeController.swift */; };
 		302C025F2388888C004E797E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302C025E2388888C004E797E /* User.swift */; };
+		3072C1C423A6B14800970B35 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3072C1C323A6B14800970B35 /* Service.swift */; };
 		3077FED02391A47E004B00A8 /* HomeDatasourceController+NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3077FECF2391A47E004B00A8 /* HomeDatasourceController+NavBar.swift */; };
 		30A77173238990550042E1E7 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A77172238990550042E1E7 /* UserCell.swift */; };
 		30BFA632239BA5A500F0FCC0 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFA631239BA5A500F0FCC0 /* TweetCell.swift */; };
@@ -30,6 +31,7 @@
 		30115ECB23511330007090F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30115ED423512DEB007090F5 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		302C025E2388888C004E797E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3072C1C323A6B14800970B35 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		3077FECF2391A47E004B00A8 /* HomeDatasourceController+NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeDatasourceController+NavBar.swift"; sourceTree = "<group>"; };
 		30A77172238990550042E1E7 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		30BFA631239BA5A500F0FCC0 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		30115EBC2351132E007090F5 /* TwitterLBTA */ = {
 			isa = PBXGroup;
 			children = (
+				3072C1C223A6B12500970B35 /* Service */,
 				30D7BCB72355156D00192363 /* Model */,
 				30D7BCB62355156400192363 /* View */,
 				30D7BCB52355155A00192363 /* Controller */,
@@ -101,6 +104,14 @@
 				30115EC823511330007090F5 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3072C1C223A6B12500970B35 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				3072C1C323A6B14800970B35 /* Service.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		30D7BCB52355155A00192363 /* Controller */ = {
@@ -263,6 +274,7 @@
 				30D7BCB92355159300192363 /* UserHeaderFooter.swift in Sources */,
 				30D7BCB4235509D600192363 /* HomeDatasourceController.swift in Sources */,
 				3077FED02391A47E004B00A8 /* HomeDatasourceController+NavBar.swift in Sources */,
+				3072C1C423A6B14800970B35 /* Service.swift in Sources */,
 				30115ED523512DEB007090F5 /* HomeController.swift in Sources */,
 				30A77173238990550042E1E7 /* UserCell.swift in Sources */,
 			);
