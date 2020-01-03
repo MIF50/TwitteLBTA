@@ -14,7 +14,7 @@ struct Service {
     
     static var sharedInstance = Service()
     
-    func fetchHomeFeed(completion: @escaping ([User])->()) {
+    func fetchHomeFeed(completion: @escaping ([User]?,[Tweet]?,APIError?)->()) {
         
         // start json fetch
         let request: APIRequest<Home, APIError> = tron.codable.request("/twitter/home")
@@ -22,30 +22,35 @@ struct Service {
             print("success fetch home data \(home)")
             var usersData = [User]()
             home.users.forEach { (data) in
-                usersData.append(
-                    User(
-                        name: data.name,
-                        username: data.username,
-                        bioText: data.bio,
-                        profileImage: UIImage()
-                    )
-                )
+                // name: data.name,
+                // username: data.username,
+                // bioText: data.bio,
+                // profileImageUrl: data.profileImageUrl
+                usersData.append(User(withUser: data))
+            }
+            var tweetData = [Tweet]()
+            home.tweets.forEach { (tweet) in
+                //name: tweet.user.name,
+                //username: tweet.user.username,
+                //bioText: tweet.user.bio,
+                //profileImageUrl: tweet.user.profileImageUrl
+                let tweetUser = User(withUser: tweet.user)
+                tweetData.append(Tweet(user: tweetUser, message: tweet.message))
             }
             
-            completion(usersData)
+            completion(usersData,tweetData,nil)
             
-            //                    let homeDatasourse = HomeDatasource()
-            //                    homeDatasourse.users = usersData
-            //                    self.datasource = homeDatasourse
             
         }) { (error) in
-            print("error when fetching home data \(String(describing: error.errorDescription))")
+            completion(nil,nil,error)
+            print("error when fetching home data \(String(describing: error))")
         }
     }
     
     
     struct Home: Codable {
         let users: [UserData]
+        let tweets: [TweetData]
         
         
     }
@@ -55,6 +60,13 @@ struct Service {
         let username: String
         let bio: String
         let profileImageUrl: String
+        
+    }
+    
+    struct TweetData: Codable {
+        let user: UserData
+        let message: String
+
     }
     
 }

@@ -15,6 +15,8 @@ class TweetCell: DatasourceCell {
     override var datasourceItem: Any? {
         didSet {
             guard let tweet = datasourceItem as? Tweet else { return }
+            // load image in tweet cell 
+            profileImageView.loadImage(urlString: tweet.user.profileImageUrl)
             // to cutome text font
             let attributedText = NSMutableAttributedString(
                 string: tweet.user.name,
@@ -51,8 +53,8 @@ class TweetCell: DatasourceCell {
     }
     
     /* image view for user  */
-       let profileImageView : UIImageView = {
-          let imageView = UIImageView()
+       let profileImageView : CachedImageView = {
+          let imageView = CachedImageView()
            imageView.image = #imageLiteral(resourceName: "image_profile")
            imageView.layer.cornerRadius = 5
            imageView.clipsToBounds = true

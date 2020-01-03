@@ -12,5 +12,19 @@ struct User {
     let name: String
     let username: String
     let bioText: String
-    let profileImage: UIImage
+    let profileImageUrl: String
+    
+    init(withUser userData : Service.UserData) {
+        name = userData.name
+        username = userData.username
+        bioText = userData.bio
+        profileImageUrl = userData.profileImageUrl
+    }
+    
+    init( name: String, username: String, bioText: String, profileImageUrl: String) {
+        self.name = name
+        self.username = username
+        self.bioText = bioText
+        self.profileImageUrl = profileImageUrl
+    }
 }
