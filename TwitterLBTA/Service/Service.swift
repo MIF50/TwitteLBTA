@@ -22,18 +22,10 @@ struct Service {
             print("success fetch home data \(home)")
             var usersData = [User]()
             home.users.forEach { (data) in
-                // name: data.name,
-                // username: data.username,
-                // bioText: data.bio,
-                // profileImageUrl: data.profileImageUrl
                 usersData.append(User(withUser: data))
             }
             var tweetData = [Tweet]()
             home.tweets.forEach { (tweet) in
-                //name: tweet.user.name,
-                //username: tweet.user.username,
-                //bioText: tweet.user.bio,
-                //profileImageUrl: tweet.user.profileImageUrl
                 let tweetUser = User(withUser: tweet.user)
                 tweetData.append(Tweet(user: tweetUser, message: tweet.message))
             }
